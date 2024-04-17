@@ -19,6 +19,9 @@ html {
 
 body {
     background-color: #323131;
+    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5,  #0840b9);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
     color: white;
     position: relative;
     max-width: 540px;
@@ -27,7 +30,21 @@ body {
     font-family: 'Suisse';
     box-sizing: border-box;
     padding: 36px;
+    hyphens: unset;
 }
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 .header {
     display: flex;
@@ -56,6 +73,8 @@ body {
 .button:hover {
     opacity: 0.5;
 }
+
+.main {}
 
 .image {
     width: 80%;
