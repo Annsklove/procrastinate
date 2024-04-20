@@ -1,0 +1,198 @@
+@mixin _min2600 {
+    @media (min-width: 2600px){
+        @content;
+    }
+}
+@mixin _min2200 {
+    @media (min-width: 2200px){
+        @content;
+    }
+}
+@mixin _min2000 {
+    @media (min-width: 2000px){
+        @content;
+    }
+}
+
+@mixin _min1860 {
+    @media (min-width: 1860px){
+        @content;
+    }
+}
+
+@mixin _min1600 {
+    @media (min-width: 1600px){
+        @content;
+    }
+}
+@mixin _min1400 {
+    @media (min-width: 1400px){
+        @content;
+    }
+}
+
+@mixin _min1200 {
+    @media (min-width: 1200px){
+        @content;
+    }
+}
+@mixin _2400 {
+    @media (max-width: 2400px){
+        @content;
+    }
+}
+
+
+@mixin _2000 {
+    @media (max-width: 1999px){
+        @content;
+    }
+}
+@mixin _1860 {
+    @media (max-width: 1859px){
+        @content;
+    }
+}
+
+@mixin _1600 {
+    @media (max-width: 1599px){
+        @content;
+    }
+}
+
+@mixin _1400 {
+    @media (max-width: 1400px){
+        @content;
+    }
+}
+
+@mixin _1300 {
+    @media (max-width: 1300px){
+        @content;
+    }
+}
+
+@mixin _1200 {
+    @media (max-width: 1200px){
+        @content;
+    }
+}
+@mixin _1024 {
+    @media (max-width: 1024px){
+        @content;
+    }
+}
+
+@mixin _min992 {
+    @media (min-width: 992px){
+        @content;
+    }
+}
+@mixin _992 {
+    @media (max-width: 992px){
+        @content;
+    }
+}
+
+@mixin _991 {
+    @media (max-width: 991px){
+        @content;
+    }
+}
+
+@mixin _979 {
+    @media (max-width: 979px){
+        @content;
+    }
+}
+@mixin _800 {
+    @media (max-width: 800px){
+        @content;
+    }
+}
+
+@mixin _min768 {
+    @media (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin _768 {
+    @media (max-width: 768px){
+        @content;
+    }
+}
+
+@mixin _700 {
+    @media (max-width: 700px){
+        @content;
+    }
+}
+
+@mixin _min640 {
+    @media (min-width: 641px){
+        @content;
+    }
+}
+
+// 1st screen
+@mixin _640 {
+    @media (max-width: 640px){
+        @content;
+    }
+}
+
+@mixin _600 {
+    @media (max-width: 600px){
+        @content;
+    }
+}
+
+@mixin _575 {
+    @media (max-width: 575px){
+        @content;
+    }
+}
+@mixin _500 {
+    @media (max-width: 500px){
+        @content;
+    }
+}
+
+
+@mixin _480 {
+    @media (max-width: 480px){
+        @content;
+    }
+}
+
+@mixin _420 {
+    @media (max-width: 420px){
+        @content;
+    }
+}
+
+@mixin _380{
+    @media (max-width: 380px){
+        @content;
+    }
+}
+
+// 2nd screen
+@mixin _360{
+    @media (max-width: 360px){
+        @content;
+    }
+}
+
+@mixin _350{
+    @media (max-width: 350px){
+        @content;
+    }
+}
+
+@mixin _330{
+    @media (max-width: 330px){
+        @content;
+    }
+}
