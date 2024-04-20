@@ -194,6 +194,14 @@ html {
         border: 2px solid #2b2834;
         border-radius: var(--btn-brd);
 
+        .emoj {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            transition-duration: 0.2s;
+        }
+
         @include _640 {
             background-color: #fff;
         }
@@ -208,6 +216,13 @@ html {
                     left: 0;
                     top: 0;
                     opacity: 1;
+                }
+
+                .emoj {
+                    bottom: 3px;
+                    left: 2px;
+                    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+                    transition-duration: 0.2s;
                 }
             }
         }
