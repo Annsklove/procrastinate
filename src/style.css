@@ -83,11 +83,10 @@ html {
   @media (max-width: 640px) {
     .main {
       --mn-gap: 20px;
-      --pad-top: 20px; } }
-  @media (max-width: 640px) {
-    .main {
+      --pad-top: 20px;
       -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr;
+      padding-bottom: 40px; } }
   .main__box-img {
     padding-top: var(--pad-top); }
     .main__box-img .image {

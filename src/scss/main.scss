@@ -67,16 +67,15 @@ html {
     @include _640 {
         --mn-gap: 20px;
         --pad-top: 20px;
+
+        grid-template-columns: 1fr;
+        padding-bottom: 40px;
     }
 
     display: grid;
     grid-gap: var(--mn-gap);
     min-height: 80vh;
     grid-template-columns: 1fr 1fr;
-
-    @include _640 {
-        grid-template-columns: 1fr;
-    }
 
     &__box-img {
         padding-top: var(--pad-top);
