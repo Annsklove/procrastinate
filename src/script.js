@@ -1,6 +1,6 @@
 let phrases = [{
         text: 'отправить другу смешную гифку',
-        image: 'https://code.s3.yandex.net/web-code/procrastinate/1.gif'
+        image: 'src/images/sport.png'
     },
     {
         text: 'посмотреть скидки на авиабилеты',
