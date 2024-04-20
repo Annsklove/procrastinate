@@ -152,10 +152,14 @@ button.addEventListener('click', function () {
     let randomElement = getRandomElement(phrases);
     smoothly(phrase, 'textContent', randomElement.text);
     smoothly(image, 'src', randomElement.image);
-    if (randomElement.text.length > 34) {
-        advice.style.fontSize = '33px';
+    if (randomElement.text.length > 48) {
+        // advice.style.fontSize = '33px';
+        advice.classList.add('small-text');
+        advice.classList.remove('big-text');
     } else {
-        advice.style.fontSize = '42px';
+        // advice.style.fontSize = '42px';
+        advice.classList.add('big-text');
+        advice.classList.remove('small-text');
     }
 });
 for (i = 0; i <= 1; i = i + 1) {
