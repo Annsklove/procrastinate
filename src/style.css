@@ -26,7 +26,7 @@ html {
       width: 1200px; } }
   @media (max-width: 640px) {
     .mn-wrap {
-      --wrap-pd: 40px; } }
+      --wrap-pd: 30px; } }
 
 .body-procrastinate {
   background: -webkit-linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #0840b9);
@@ -87,8 +87,8 @@ html {
   align-items: center; }
   @media (max-width: 640px) {
     .header {
-      --header-hght: 40px;
-      -logo-fnt-sz: 20px; } }
+      --header-hght: 60px;
+      -logo-fnt-sz: 18px; } }
   .header .logo {
     font-weight: bold;
     font-size: var(--logo-fnt-sz);
@@ -104,6 +104,11 @@ html {
   min-height: 80vh;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr; }
+  @media (min-width: 641px) {
+    .main {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
   @media (max-width: 640px) {
     .main {
       --mn-gap: 20px;
@@ -144,8 +149,8 @@ html {
     --small-text: 40px; }
     @media (max-width: 640px) {
       .main__box-advice {
-        --big-text: 32px;
-        --small-text: 26px; } }
+        --big-text: 28px;
+        --small-text: 22px; } }
     .main__box-advice .advice {
       font-size: var(--big-text);
       line-height: 1.1;
@@ -159,6 +164,11 @@ html {
         height: 30px;
         position: relative;
         bottom: -3px; }
+        @media (max-width: 640px) {
+          .main__box-advice .advice .cursor {
+            width: 3px;
+            height: 22px;
+            bottom: -2px; } }
   .main .button {
     --btn-brd: 50px;
     --btn-hght: 66px;
@@ -170,6 +180,7 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 3px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -186,6 +197,12 @@ html {
     position: relative;
     border: 2px solid #2b2834;
     border-radius: var(--btn-brd); }
+    @media (max-width: 640px) {
+      .main .button {
+        --btn-hght: 58px;
+        --btn-pdg: 30px;
+        --btn-fnt-sz: 18px;
+        background-color: #fff; } }
     .main .button .emoj {
       position: relative;
       bottom: 0;
@@ -196,9 +213,6 @@ html {
       -webkit-transition-duration: 0.2s;
       -o-transition-duration: 0.2s;
       transition-duration: 0.2s; }
-    @media (max-width: 640px) {
-      .main .button {
-        background-color: #fff; } }
     @media (min-width: 641px) {
       .main .button:hover::before {
         -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);

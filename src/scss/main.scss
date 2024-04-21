@@ -19,7 +19,7 @@ html {
     }
 
     @include _640 {
-        --wrap-pd: 40px;
+        --wrap-pd: 30px;
     }
 
     max-width: 100%;
@@ -71,14 +71,13 @@ html {
 }
 
 
-
 .header {
     --header-hght: 60px;
     --logo-fnt-sz: 24px;
 
     @include _640 {
-        --header-hght: 40px;
-        -logo-fnt-sz: 20px;
+        --header-hght: 60px;
+        -logo-fnt-sz: 18px;
     }
 
     display: flex;
@@ -98,6 +97,10 @@ html {
 .main {
     --mn-gap: 80px;
     --pad-top: 60px;
+
+    @include _min640 {
+        align-items: center;
+    }
 
     @include _640 {
         --mn-gap: 20px;
@@ -144,8 +147,8 @@ html {
         --small-text: 40px;
 
         @include _640 {
-            --big-text: 32px;
-            --small-text: 26px;
+            --big-text: 28px;
+            --small-text: 22px;
         }
 
         .advice {
@@ -167,6 +170,12 @@ html {
                 height: 30px;
                 position: relative;
                 bottom: -3px;
+
+                @include _640 {
+                    width: 3px;
+                    height: 22px;
+                    bottom: -2px;
+                }
             }
         }
     }
@@ -177,11 +186,20 @@ html {
         --btn-pdg: 40px;
         --btn-fnt-sz: 22px;
 
+        @include _640 {
+            --btn-hght: 58px;
+            --btn-pdg: 30px;
+            --btn-fnt-sz: 18px;
+
+            background-color: #fff;
+        }
+
         height: var(--btn-hght);
         padding-left: var(--btn-pdg);
         padding-right: var(--btn-pdg);
 
         display: flex;
+        gap: 3px;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
@@ -200,10 +218,6 @@ html {
             left: 0;
             transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
             transition-duration: 0.2s;
-        }
-
-        @include _640 {
-            background-color: #fff;
         }
 
         @include _min640 {
