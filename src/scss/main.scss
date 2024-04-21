@@ -143,8 +143,8 @@ html {
     }
 
     &__box-advice {
-        --big-text: 48px;
-        --small-text: 40px;
+        --big-text: 50px;
+        --small-text: 42px;
 
         @include _640 {
             --big-text: 28px;
@@ -211,6 +211,7 @@ html {
         position: relative;
         border: 2px solid #2b2834;
         border-radius: var(--btn-brd);
+        outline: none;
 
         .emoj {
             position: relative;
@@ -218,27 +219,6 @@ html {
             left: 0;
             transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
             transition-duration: 0.2s;
-        }
-
-        @include _min640 {
-            &:hover {
-                &::before {
-                    // transition: all 0.1s ease;
-                    // transition: all cubic-bezier(.17,.67,.83,.67);
-                    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-                    transition-duration: 0.2s;
-                    left: 0;
-                    top: 0;
-                    opacity: 1;
-                }
-
-                .emoj {
-                    bottom: 3px;
-                    left: 2px;
-                    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-                    transition-duration: 0.2s;
-                }
-            }
         }
 
         @include _min640 {
@@ -259,14 +239,33 @@ html {
                 opacity: 0.8;
                 z-index: -1;
             }
+
+            &:hover {
+                &::before {
+                    // transition: all 0.1s ease;
+                    // transition: all cubic-bezier(.17,.67,.83,.67);
+                    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+                    transition-duration: 0.2s;
+                    left: 0;
+                    top: 0;
+                    opacity: 1;
+                }
+
+                .emoj {
+                    bottom: 3px;
+                    left: 2px;
+                    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+                    transition-duration: 0.2s;
+                }
+            }
         }
 
         &:hover,
         &:focus,
         &:active {
-            text-decoration: none;
             outline: none;
             box-shadow: none;
+            outline-offset: 0;
         }
     }
 }

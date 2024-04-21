@@ -145,8 +145,8 @@ html {
         -ms-flex-pack: center;
         justify-content: center; } }
   .main__box-advice {
-    --big-text: 48px;
-    --small-text: 40px; }
+    --big-text: 50px;
+    --small-text: 42px; }
     @media (max-width: 640px) {
       .main__box-advice {
         --big-text: 28px;
@@ -196,7 +196,8 @@ html {
     color: #000;
     position: relative;
     border: 2px solid #2b2834;
-    border-radius: var(--btn-brd); }
+    border-radius: var(--btn-brd);
+    outline: none; }
     @media (max-width: 640px) {
       .main .button {
         --btn-hght: 58px;
@@ -213,26 +214,6 @@ html {
       -webkit-transition-duration: 0.2s;
       -o-transition-duration: 0.2s;
       transition-duration: 0.2s; }
-    @media (min-width: 641px) {
-      .main .button:hover::before {
-        -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-        -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-        -webkit-transition-duration: 0.2s;
-        -o-transition-duration: 0.2s;
-        transition-duration: 0.2s;
-        left: 0;
-        top: 0;
-        opacity: 1; }
-      .main .button:hover .emoj {
-        bottom: 3px;
-        left: 2px;
-        -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-        -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-        -webkit-transition-duration: 0.2s;
-        -o-transition-duration: 0.2s;
-        transition-duration: 0.2s; } }
     @media (min-width: 641px) {
       .main .button::before {
         -webkit-transition: all 0.1s ease;
@@ -254,12 +235,31 @@ html {
         width: 100%;
         height: 100%;
         opacity: 0.8;
-        z-index: -1; } }
+        z-index: -1; }
+      .main .button:hover::before {
+        -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        -webkit-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        left: 0;
+        top: 0;
+        opacity: 1; }
+      .main .button:hover .emoj {
+        bottom: 3px;
+        left: 2px;
+        -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        -webkit-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+        transition-duration: 0.2s; } }
     .main .button:hover, .main .button:focus, .main .button:active {
-      text-decoration: none;
       outline: none;
       -webkit-box-shadow: none;
-      box-shadow: none; }
+      box-shadow: none;
+      outline-offset: 0; }
 
 .footer {
   font-size: 16px;
