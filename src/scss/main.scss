@@ -118,7 +118,7 @@ html {
 
 
     &__box-img {
-        padding-top: var(--pad-top);
+        // padding-top: var(--pad-top);
 
         .image {
             width: 450px;
@@ -135,7 +135,7 @@ html {
     &__box-btn {
         display: flex;
         justify-content: start;
-        padding-top: 40px;
+        padding-top: 50px;
 
         @include _640 {
             justify-content: center;
@@ -145,17 +145,19 @@ html {
     &__box-advice {
         --big-text: 50px;
         --small-text: 42px;
+        --mini-text: 36px;
 
         @include _640 {
             --big-text: 28px;
             --small-text: 22px;
+            --mini-text: 20px;
         }
 
         .advice {
             font-size: var(--big-text);
             // font-weight: bold;
             line-height: 1.1;
-            padding-top: var(--pad-top);
+            // padding-top: var(--pad-top);
 
             &.big-text {
                 font-size: var(--big-text);
@@ -163,6 +165,9 @@ html {
 
             &.small-text {
                 font-size: var(--small-text);
+            }
+            &.mini-text {
+                font-size: var(--mini-text);
             }
 
             .cursor {

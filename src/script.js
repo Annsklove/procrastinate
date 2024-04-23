@@ -350,15 +350,11 @@ let phrases = [{
     //     image: 'src/images/80-pr.png'
     // },
     {
-        text: 'включить свой любимый канал на YouTube! Видео про котиков? Кулинарные рецепты? А может новинки технологий? Пора окунуться в мир развлечений!',
+        text: 'включить свой любимый канал на YouTube! Видео про котиков? Кулинарные рецепты? А может новинки технологий?',
         image: 'src/images/81-pr.png'
     },
     {
-        text: 'включить свой любимый канал на YouTube! Видео про котиков? Кулинарные рецепты? А может новинки технологий? Пора окунуться в мир развлечений!',
-        image: 'src/images/81-pr.png'
-    },
-    {
-        text: 'погрузитесь в атмосферу свободы и приключений за рулём авто! Включить музыку и отправиться в увлекательное путешествие по дорогам',
+        text: 'погрузитесь в атмосферу свободы и приключений за рулём авто! Включить музыку и отправиться в увлекательное путешествие',
         image: 'src/images/82-pr.png'
     },
 ];
@@ -375,14 +371,22 @@ button.addEventListener('click', function () {
     let randomElement = getRandomElement(phrases);
     smoothly(phrase, 'textContent', randomElement.text);
     smoothly(image, 'src', randomElement.image);
-    if (randomElement.text.length > 48) {
+    if (randomElement.text.length > 50) {
         // advice.style.fontSize = '33px';
         advice.classList.add('small-text');
         advice.classList.remove('big-text');
-    } else {
+        advice.classList.remove('mini-text');
+    } else if (randomElement.text.length > 66)  {
+        // advice.style.fontSize = '42px';
+        advice.classList.add('mini-text');
+        advice.classList.remove('small-text');
+        advice.classList.remove('big-text');
+    }
+     else {
         // advice.style.fontSize = '42px';
         advice.classList.add('big-text');
         advice.classList.remove('small-text');
+        advice.classList.remove('mini-text');
     }
 });
 for (i = 0; i <= 1; i = i + 1) {
