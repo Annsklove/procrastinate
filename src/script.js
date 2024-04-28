@@ -17,7 +17,7 @@
     t.smoothly = ((t, n, r) => {
         ((t, n) => {
             e.has(t) || (t.style.transition = n)
-        })(t, "all 0.5s ease-in-out"), e.has(t) || e.set(t, {
+        })(t, "all 0.7s ease-in-out"), e.has(t) || e.set(t, {
             prop: n,
             contents: [],
             timer: null
