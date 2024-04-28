@@ -394,7 +394,7 @@ let phrases = [{
         image: 'src/images/61-pr.png'
     },
     {
-        text: 'устроить мини-путешествие по виртуальным музеям и галереям, изучая искусство и культуру разных эпох и народов - погрузитесь в мир истории и красоты!',
+        text: 'устроить мини-путешествие по виртуальным музеям и галереям, погрузившись в мир истории и красоты!',
         image: 'src/images/92-pr.png'
     },
     {
@@ -416,24 +416,22 @@ button.addEventListener('click', function () {
     smoothly(phrase, 'textContent', randomElement.text);
     smoothly(image, 'src', randomElement.image);
     if (randomElement.text.length > 50) {
-        // advice.style.fontSize = '33px';
         advice.classList.add('small-text');
         advice.classList.remove('big-text');
         advice.classList.remove('mini-text');
     } else if (randomElement.text.length > 66)  {
-        // advice.style.fontSize = '42px';
         advice.classList.add('mini-text');
         advice.classList.remove('small-text');
         advice.classList.remove('big-text');
     }
      else {
-        // advice.style.fontSize = '42px';
         advice.classList.add('big-text');
         advice.classList.remove('small-text');
         advice.classList.remove('mini-text');
     }
 });
-for (i = 0; i <= 1; i = i + 1) {
-    smoothly(phrase, 'textContent', phrases[i].text);
-    smoothly(image, 'src', phrases[i].image);
-}
+
+// for (i = 0; i <= 1; i = i + 1) {
+//     smoothly(phrase, 'textContent', phrases[i].text);
+//     smoothly(image, 'src', phrases[i].image);
+// }
