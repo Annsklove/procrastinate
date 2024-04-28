@@ -18,7 +18,7 @@
     t.smoothly = ((t, n, r) => {
         ((t, n) => {
             e.has(t) || (t.style.transition = n)
-        })(t, "opacity 0.5s ease-in-out");
+        })(t, "opacity 0.7s ease-in-out");
 
         e.has(t) || e.set(t, {
             prop: n,
