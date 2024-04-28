@@ -1,4 +1,4 @@
-!function(t) {
+! function (t) {
     const e = new WeakMap,
         n = (t, e, n) => new Promise(o => {
             const s = () => {
@@ -424,9 +424,23 @@ let phrase = document.querySelector('.phrase');
 let advice = document.querySelector('.advice');
 let image = document.querySelector('.image');
 
+let lastClickTime = 0;
+const minClickInterval = 1000;
+
 
 button.addEventListener('click', function () {
+    const currentTime = new Date().getTime();
+    // Проверяем, прошло ли достаточно времени с момента последнего клика
+    if (currentTime - lastClickTime < minClickInterval) {
+        event.preventDefault();
+        return false;
+    }
+    lastClickTime = currentTime;
+
+
     let randomElement = getRandomElement(phrases);
+
+    smoothly(image, 'src', randomElement.image);
 
     if (randomElement.text.length > 50) {
         advice.classList.add('small-text');
@@ -443,7 +457,7 @@ button.addEventListener('click', function () {
     }
 
     smoothly(phrase, 'textContent', randomElement.text);
-    smoothly(image, 'src', randomElement.image);
+    
 });
 
 // for (i = 0; i <= 1; i = i + 1) {
