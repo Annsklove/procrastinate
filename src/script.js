@@ -427,7 +427,6 @@ let image = document.querySelector('.image');
 let lastClickTime = 0;
 const minClickInterval = 1000;
 
-
 button.addEventListener('click', function () {
     const currentTime = new Date().getTime();
     // Проверяем, прошло ли достаточно времени с момента последнего клика
@@ -455,7 +454,18 @@ button.addEventListener('click', function () {
     }
 
     smoothly(phrase, 'textContent', randomElement.text);
-    smoothly(image, 'src', randomElement.image);
+    // smoothly(image, 'src', randomElement.image);
+
+     // Создаем новый объект Image
+     let newImage = new Image();
+     // Устанавливаем путь к изображению
+     newImage.src = randomElement.image;
+     // Добавляем обработчик загрузки изображения
+     newImage.onload = function() {
+         // Применяем анимацию smoothly к смене изображения
+         smoothly(image, 'src', newImage.src);
+     };
+    
 });
 
 // for (i = 0; i <= 1; i = i + 1) {
