@@ -143,14 +143,26 @@ html {
         -ms-flex-pack: center;
         justify-content: center; } }
   .main__box-advice {
-    --big-text: 50px;
-    --small-text: 42px;
-    --mini-text: 36px; }
+    --big-text: 46px;
+    --small-text: 38px;
+    --mini-text: 30px; }
     @media (max-width: 640px) {
       .main__box-advice {
         --big-text: 28px;
         --small-text: 22px;
         --mini-text: 20px; } }
+    @media (min-width: 641px) {
+      .main__box-advice {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; } }
     .main__box-advice .advice {
       font-size: var(--big-text);
       line-height: 1.1; }
