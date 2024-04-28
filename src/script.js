@@ -1,4 +1,4 @@
-! function (t) {
+!function(t) {
     const e = new WeakMap,
         n = (t, e, n) => new Promise(o => {
             const s = () => {
@@ -14,22 +14,33 @@
         }).then(() => e.get(t).contents.length ? i(t) : (t => {
             e.get(t).timer = null
         })(t));
+
     t.smoothly = ((t, n, r) => {
         ((t, n) => {
             e.has(t) || (t.style.transition = n)
-        })(t, "opacity 0.5s ease-in-out"), e.has(t) || e.set(t, {
+        })(t, "opacity 0.5s ease-in-out");
+
+        e.has(t) || e.set(t, {
             prop: n,
             contents: [],
             timer: null
         });
+
         const c = e.get(t);
-        c.contents.push(r), c.timer || (c.timer = setTimeout(() => {
+        c.contents.push(r);
+
+        // Если анимация уже запущена, не запускаем её снова
+        if (c.timer) return;
+
+        c.timer = setTimeout(() => {
             if (c.contents.length > 1) return i(t);
-            c.timer = null, (t => o(t).then(() => {
+            c.timer = null;
+            o(t).then(() => {
                 const n = e.get(t);
-                return t[n.prop] = n.contents.shift(), s(t)
-            }))(t)
-        }, 0))
+                t[n.prop] = n.contents.shift();
+                s(t);
+            });
+        }, 0);
     })
 }(window);
 
@@ -403,6 +414,7 @@ let phrases = [{
     }
 ];
 
+
 function getRandomElement(arr) {
     let randIndex = Math.floor(Math.random() * arr.length);
     return arr[randIndex];
@@ -411,6 +423,7 @@ let button = document.querySelector('.button');
 let phrase = document.querySelector('.phrase');
 let advice = document.querySelector('.advice');
 let image = document.querySelector('.image');
+
 
 button.addEventListener('click', function () {
     let randomElement = getRandomElement(phrases);
