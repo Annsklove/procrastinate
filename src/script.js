@@ -17,7 +17,7 @@
     t.smoothly = ((t, n, r) => {
         ((t, n) => {
             e.has(t) || (t.style.transition = n)
-        })(t, "all 0.5s ease-in-out"), e.has(t) || e.set(t, {
+        })(t, "opacity 0.5s ease-in-out"), e.has(t) || e.set(t, {
             prop: n,
             contents: [],
             timer: null
@@ -411,24 +411,26 @@ let button = document.querySelector('.button');
 let phrase = document.querySelector('.phrase');
 let advice = document.querySelector('.advice');
 let image = document.querySelector('.image');
+
 button.addEventListener('click', function () {
     let randomElement = getRandomElement(phrases);
-    smoothly(phrase, 'textContent', randomElement.text);
-    smoothly(image, 'src', randomElement.image);
+
     if (randomElement.text.length > 50) {
         advice.classList.add('small-text');
         advice.classList.remove('big-text');
         advice.classList.remove('mini-text');
-    } else if (randomElement.text.length > 66)  {
+    } else if (randomElement.text.length > 66) {
         advice.classList.add('mini-text');
         advice.classList.remove('small-text');
         advice.classList.remove('big-text');
-    }
-     else {
+    } else {
         advice.classList.add('big-text');
         advice.classList.remove('small-text');
         advice.classList.remove('mini-text');
     }
+
+    smoothly(phrase, 'textContent', randomElement.text);
+    smoothly(image, 'src', randomElement.image);
 });
 
 // for (i = 0; i <= 1; i = i + 1) {
