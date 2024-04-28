@@ -18,7 +18,7 @@
     t.smoothly = ((t, n, r) => {
         ((t, n) => {
             e.has(t) || (t.style.transition = n)
-        })(t, "opacity 0.7s ease-in-out");
+        })(t, "opacity 0.3s ease-in-out");
 
         e.has(t) || e.set(t, {
             prop: n,
@@ -440,8 +440,6 @@ button.addEventListener('click', function () {
 
     let randomElement = getRandomElement(phrases);
 
-    smoothly(image, 'src', randomElement.image);
-
     if (randomElement.text.length > 50) {
         advice.classList.add('small-text');
         advice.classList.remove('big-text');
@@ -457,7 +455,7 @@ button.addEventListener('click', function () {
     }
 
     smoothly(phrase, 'textContent', randomElement.text);
-    
+    smoothly(image, 'src', randomElement.image);
 });
 
 // for (i = 0; i <= 1; i = i + 1) {
