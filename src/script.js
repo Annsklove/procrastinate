@@ -465,7 +465,6 @@ button.addEventListener('click', function () {
          // Применяем анимацию smoothly к смене изображения
          smoothly(image, 'src', newImage.src);
      };
-    
 });
 
 // for (i = 0; i <= 1; i = i + 1) {
